@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Execution Playbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header class="main-header">
+  <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<div id="sideMenu" class="side-menu">
+
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+
+
+
+  <div class="dropdown">
+    <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+      Buy on Selar <span class="arrow">▾</span>
+    </div>
+
+    <div class="dropdown-menu">
+      <a href="https://selar.com/7715851817" target="_blank">Hardcopy</a>
+      <a href="https://selar.com/8lgg6cb916" target="_blank">Softcopy</a>
+    </div>
+  </div>
+
+
+  <!-- CHAPTERS (INSIDE SIDE MENU) -->
+  <a href="https://selar.com/7715851817" target="_blank">
+    Chapter 1: Why capable people still fail to execute
+  </a>
+
+  <a href="https://selar.com/7715851817" target="_blank">
+    Chapter 2: Starting with the goal
+  </a>
+
+  <a href="https://selar.com/7715851817" target="_blank">
+    Chapter 3: From your vision to your goals
+  </a>
+
+  <a href="https://selar.com/7715851817" target="_blank">
+    Chapter 4: Goal refinement and execution focus
+  </a>
+
+  <a href="https://selar.com/7715851817" target="_blank">
+    Chapter 5: Defining success metric to support your goal
+  </a>
+
+</div>
+  <img src="logo.jpeg" alt="BookLogo" class="logo">
+
+  <nav class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#about-book">About the Book</a>
+    <a href="#about-author">About the Author</a>
+    <a href="#ebook">Buy Ebook</a>
+    <a href="#hardcopy">Buy Hardcopy</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <div class="hero-content">
+    <h1> The Execution Playbook</h1>
+    <div class="hero-image">
+      <img src="hero.jpeg" alt="Execution Playbook Book Cover">
+    </div>
+  </div>
+</section>
+<section id="chapter-preview">
+  <h2>Read Chapter One</h2>
+  <p>
+    Execution is not about ideas. It is about disciplined action under real conditions.
+
+    In this opening chapter, you will begin to understand why most strategies fail,
+    and how execution systems—not effort—determine outcomes.
+
+    Click below to unlock full access.
+  </p>
+
+ <button onclick="window.open('https://selar.com/7715851817', '_blank')">
+  Unlock Full Book
+</button>
+</section>
+
+  <style>
+  /* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.logo-header {
+  padding: 20px 40px; 
+  
+}
+
+.logo-header .logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+/* HERO SECTION */
+#hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #1d4ed8;
+  margin-bottom: 40px;
+}
+
+.hero-image img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}
+body {
+  background: radial-gradient(circle at 20% 20%, rgba(29,78,216,0.15), transparent 40%),
+              radial-gradient(circle at 80% 0%, rgba(139,92,246,0.15), transparent 40%),
+              radial-gradient(circle at 50% 100%, rgba(59,130,246,0.1), transparent 50%),
+              #0b0f1a;
+  color: #e2e8f0;
+}
+
+  section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #1d4ed8;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: #475569;
+  }
+
+  /* HERO */
+  #hero {
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background: #1d4ed8;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #1e40af;
+  }
+
+  /* INPUTS */
+  input, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #1d4ed8;
+  }
+
+  /* SPLIT SECTIONS */
+  .split {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .split-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .split-image {
+    flex: 1;
+    text-align: center;
+  }
+
+ .split-image img {
+  max-width: 320px;   /* controls size */
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 60px rgba(59,130,246,0.3);
+}
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+
+  #order {
+    text-align: center;
+  }
+
+  .order-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .order-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    text-align: left;
+  }
+
+  .order-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 30px;
+    background: #f1f5f9;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .split {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .reverse {
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+.order-card {
+  flex: 1; 
+  width: 100%;
+  max-width: none; 
+  padding: 40px;
+}
+
+.order-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .order-container {
+    flex-direction: column;
+  }
+}
+  #hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: transparent;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-image img,
+.split-image img {
+  box-shadow: 0 0 60px rgba(59,130,246,0.3);
+  border-radius: 16px;
+}
+button {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  padding: 14px 32px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(139,92,246,0.5);
+}
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+}
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+  height: 80px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+#hero {
+  margin-top: 40px;
+}
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #0f172a;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.side-menu a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.side-menu a:hover {
+  color: #60a5fa;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate into X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background: #020617;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.4s ease;
+  z-index: 2000;
+}
+
+
+.side-menu.open {
+  left: 0;
+}
+
+
+.close-btn {
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* MENU LINKS */
+.side-menu a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: 0.2s;
+}
+
+.side-menu a:hover {
+  color: #60a5fa;
+}
+
+/* OVERLAY BACKGROUND */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1500;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.video-preview {
+  position: relative;
+  max-width: 400px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.video-preview img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 40px;
+  padding: 15px 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.video-preview:hover .play-button {
+  background: rgba(139,92,246,0.8);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.video-preview {
+  position: relative;
+  width: 100%;
+  max-width: 700px;    
+  aspect-ratio: 16 / 9;  
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+.video-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px 20px;
+  border-radius: 50%;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 0;
+}
+.dropdown {
+  width: 100%;
+}
+
+.dropdown-toggle {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(0,0,0,0.2);
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.dropdown.active .dropdown-menu {
+  display: flex;
+}
+
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.footer-links{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  text-align: left;
+}
+
+
+
+.footer-links a {
+  color: #0000FF;
+  text-decoration: none;
+}
+
+.footer-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-dropdown-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+
+.footer-dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+
+.footer-dropdown-menu a {
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+
+.footer-dropdown.open .footer-dropdown-menu {
+  display: flex;
+}
+</style>
+
+<body>
+<section id="about-book" class="split">
+  <div class="split-text">
+    <h2>About the Book</h2>
+    <p>
+      Execution is where most strategies fail.
+
+The Execution Playbook: From Vision to Results is a practical, disciplined guide for leaders and professionals who are responsible for delivering outcomes not just setting direction.
+
+Rather than focusing on motivation or inspiration, this book introduces a clear execution framework built for real-world conditions like pressure, constraints, limited resources, and competing priorities.
+
+At the center of the book is the Yunusa Model of Strategic Execution (Y-MSE)—a structured approach that helps individuals and organizations move from clarity to action, from action to evidence and from evidence to sound decisions.
+
+Through practical guidance, structured thinking, and applied case examples, readers will learn how to:
+
+Translate strategy and goals into executable systems
+
+Design execution structures that hold under pressure
+
+Measure progress objectively instead of relying on intuition
+
+Decide when to continue, adjust, or stop initiatives
+
+Sustain results and institutionalize what works
+
+This is not a motivational book. It is a playbook for disciplined execution.
+
+Designed for executives, managers, entrepreneurs, and professionals who are accountable for results, The Execution Playbook is meant to be used, reviewed, and applied not read once and forgotten.
+    </p> 
+    <div class="split-image">
+    <img src="book.jpeg" alt="Book Cover">
+  </div>
+  </section>
+  
+<section>
+<div class="video-wrapper">
+  <h1>Watch a Message from the Author</h1>
+
+  <div class="video-preview">
+    <a href="https://youtu.be/XzBuMeAH_hw?si=3F240YSzGslmyyFy" target="_blank">
+      <img 
+        src="https://img.youtube.com/vi/XzBuMeAH_hw/maxresdefault.jpg" 
+        alt="Author Video"
+        onerror="this.onerror=null;this.src='https://img.youtube.com/vi/XzBuMeAH_hw/hqdefault.jpg';"
+      >
+      <div class="play-button">▶</div>
+    </a>
+  </div>
+</div>
+</section>
+
+<section id="about-author" class="split reverse">
+  <div class="split-text">
+    <h2>About the Author</h2>
+    <p>
+     A. S. Yunusa is a civil engineer, project manager, and business leader with experience delivering complex projects across construction, real estate, and organizational environments.
+
+He holds advanced training in finance and investment, alongside his engineering and project leadership background, and has worked at the intersection of technical execution, capital allocation, and leadership decision-making.
+
+Across his professional journey, he has led teams, managed risk, and navigated execution in environments defined by constraints, accountability, and uncertainty.
+
+Through practice and reflection, he developed the Yunusa Model of Strategic Execution (Y-MSE) to address a recurring challenge in organizations: capable people working hard without a reliable execution system.
+
+His work focuses on execution discipline, leadership judgment, and building systems that deliver consistent results over time.
+    </p>
+      <div class="split-image">
+    <img src="md.png" alt="Author Photo">
+  </div>
+  </section>
+
+
+  <!-- ORDER -->
+<div class="order-card" id="ebook">
+  <h2 style="text-align:center; margin-bottom:30px;">Now Available on Selar</h2>
+
+  <div class="order-container">
+
+    <!-- EBOOK -->
+   <div class="order-card">
+  <h3>Ebook</h3>
+
+  <button onclick="window.open( 'https://selar.com/8lgg6cb916')">
+    Buy Ebook
+  </button>
+</div>
+
+
+     <!-- HARDCOPY -->
+<div class="order-card" id="hardcopy">
+  <h3>Hardcopy</h3>
+
+  <button onclick="window.open('https://selar.com/7715851817')">
+    Buy Hardcopy
+  </button>
+</div>
+
+
+  </div>
+</section>
+  <!-- FOOTER -->
+ <footer style="font-size:18px; line-height:1.6;">
+  <h2 style="font-size:24px;">For Enquiries</h2>
+ <p><a href="mailto:info@asyunusa.com">info@asyunusa.com</a></p>
+<p>
+  Chat us: 
+  <a href="https://wa.me/2348084718399" target="_blank">
+    WhatsApp
+  </a>
+</p>
+
+  <h2 style="font-size:24px;">For more information about the author</h2>
+<p> <a href="https://www.asyunusa.com" target="_blank">www.asyunusa.com</a></p>
+
+  <div class="footer-links">
+
+  <!-- SELAR DROPDOWN -->
+  <div class="footer-dropdown">
+    <div class="footer-dropdown-toggle" onclick="toggleFooterDropdown(this)">
+      Buy on Selar ▾
+    </div>
+    <div class="footer-dropdown-menu">
+      <a href="https://selar.com/7715851817" target="_blank">Hardcopy</a>
+      <a href="https://selar.com/8lgg6cb916" target="_blank">Softcopy</a>
+    </div>
+  </div>
+
+</div>
+</footer>
+
+
+ <script>
+
+  function scrollToOrder() {
+    document.getElementById("order").scrollIntoView({ behavior: "smooth" });
+  }
+
+
+ function toggleMenu() {
+  const menu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("overlay");
+  const burger = document.querySelector(".hamburger");
+
+  menu.classList.toggle("open");
+  overlay.classList.toggle("show");
+  burger.classList.toggle("active");
+}
+function toggleDropdown(el) {
+  el.parentElement.classList.toggle("active");
+}
+
+function toggleFooterDropdown(el) {
+  el.parentElement.classList.toggle("open");
+}
+</script>
+</body>
+</html>
