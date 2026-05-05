@@ -417,6 +417,87 @@ footer a{
     height:45px;
   }
 }
+/* SIDEMENU DROPDOWNS */
+.dropdown{
+  width:100%;
+}
+
+.dropdown-toggle{
+  color:#fff;
+  cursor:pointer;
+  padding:12px 0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  font-size:15px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.dropdown-menu{
+  display:none;
+  flex-direction:column;
+
+  padding-left:15px;
+  margin-top:6px;
+}
+
+.dropdown-menu a{
+  border:none !important;
+  padding:8px 0;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+.dropdown.active .dropdown-menu{
+  display:flex;
+}
+
+.arrow{
+  transition:0.3s;
+}
+
+.dropdown.active .arrow{
+  transform:rotate(180deg);
+}
+
+/* FOOTER DROPDOWNS */
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.footer-dropdown{
+  text-align:left;
+}
+
+.footer-dropdown-toggle{
+  color:#fff;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.footer-dropdown-menu{
+  display:none;
+  flex-direction:column;
+
+  margin-top:8px;
+  padding-left:12px;
+}
+
+.footer-dropdown-menu a{
+  padding:5px 0;
+  color:#60a5fa;
+}
+
+.footer-dropdown.open .footer-dropdown-menu{
+  display:flex;
+}
+  
 </style>
 <body>
 <section id="about-book" class="split">
