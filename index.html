@@ -96,9 +96,33 @@
     Click below to unlock full access.
   </p>
 
- <button onclick="window.open('https://selar.com/7715851817', '_blank')">
-  Unlock Full Book
-</button>
+<div class="unlock-dropdown">
+
+  <div class="unlock-toggle" onclick="toggleUnlockDropdown(this)">
+    Unlock Full Book <span class="arrow">▾</span>
+  </div>
+
+  <div class="unlock-menu">
+
+    <a href="https://selar.com/7715851817" target="_blank">
+      Selar Hardcopy
+    </a>
+
+    <a href="https://selar.com/8lgg6cb916" target="_blank">
+      Selar Softcopy
+    </a>
+
+    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results/dp/B0GZ778GK9/ref=tmm_pap_swatch_0" target="_blank">
+      Amazon Hardcopy
+    </a>
+
+    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results-ebook/dp/B0GZ3JVM7L/ref=tmm_kin_swatch_0" target="_blank">
+      Amazon Softcopy
+    </a>
+
+  </div>
+
+</div>
 </section>
 
 <style>
@@ -497,7 +521,54 @@ footer a{
 .footer-dropdown.open .footer-dropdown-menu{
   display:flex;
 }
-  
+  .unlock-dropdown{
+  max-width:320px;
+  margin:25px auto 0;
+  position:relative;
+}
+
+.unlock-toggle{
+  background:#2563eb;
+  color:#fff;
+
+  padding:14px 20px;
+  border-radius:12px;
+
+  cursor:pointer;
+  font-weight:600;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.unlock-menu{
+  display:none;
+
+  background:#111827;
+  border-radius:12px;
+
+  margin-top:8px;
+  overflow:hidden;
+}
+
+.unlock-menu a{
+  display:block;
+  padding:14px 18px;
+
+  color:#fff;
+  text-decoration:none;
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.unlock-menu a:hover{
+  background:#1f2937;
+}
+
+.unlock-dropdown.active .unlock-menu{
+  display:block;
+}
 </style>
 <body>
 <section id="about-book" class="split">
@@ -636,6 +707,9 @@ function toggleDropdown(el) {
 
 function toggleFooterDropdown(el) {
   el.parentElement.classList.toggle("open");
+}
+   function toggleUnlockDropdown(el) {
+  el.parentElement.classList.toggle("active");
 }
 </script>
 </body>
