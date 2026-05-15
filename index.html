@@ -155,7 +155,17 @@
                 margin-bottom:20px;
                 border:2px solid #2563eb;
                 border-radius:8px;">
-
+      
+   <input 
+    type="tel" 
+    id="readerPhone"
+    placeholder="Enter your phone number"
+    style="
+        width:90%;
+        padding:14px;
+        margin-bottom:20px;
+        border:2px solid #2563eb;
+        border-radius:8px;">
         <br>
 
         <button onclick="submitAndDownload()" style="
@@ -196,10 +206,10 @@ function closeChapterForm() {
 
 function submitAndDownload() {
 
-    const name = document.getElementById("readerName").value;
-    const email = document.getElementById("readerEmail").value;
-
-    if(name === "" || email === "") {
+   const name = document.getElementById("readerName").value;
+   const email = document.getElementById("readerEmail").value;
+   const phone = document.getElementById("readerPhone").value;
+   if(name === "" || email === "" || phone === "") {
         alert("Please fill in all fields.");
         return;
     }
