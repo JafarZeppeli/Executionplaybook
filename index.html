@@ -136,8 +136,8 @@
 
         <input 
             type="text" 
-            id="readerNumber"
-            placeholder="Enter your phone number"
+            id="readerName"
+            placeholder="Enter your name"
             style="
                 width:90%;
                 padding:14px;
@@ -196,10 +196,10 @@ function closeChapterForm() {
 
 function submitAndDownload() {
 
-    const name = document.getElementById("readerNumber").value;
+    const name = document.getElementById("readerName").value;
     const email = document.getElementById("readerEmail").value;
 
-    if(number === "" || email === "") {
+    if(name === "" || email === "") {
         alert("Please fill in all fields.");
         return;
     }
@@ -212,7 +212,7 @@ function submitAndDownload() {
     // REPLACE THIS WITH YOUR PDF LOCATION
     link.href = "chapter1.pdf";
 
-    link.download = "Chapter1.pdf";
+    link.download = "Chapter-One.pdf";
 
     document.body.appendChild(link);
     link.click();
