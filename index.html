@@ -136,8 +136,8 @@
 
         <input 
             type="text" 
-            id="readerName"
-            placeholder="Enter your name"
+            id="readerNumber"
+            placeholder="Enter your phone number"
             style="
                 width:90%;
                 padding:14px;
@@ -196,10 +196,10 @@ function closeChapterForm() {
 
 function submitAndDownload() {
 
-    const name = document.getElementById("readerName").value;
+    const name = document.getElementById("readerNumber").value;
     const email = document.getElementById("readerEmail").value;
 
-    if(name === "" || email === "") {
+    if(number === "" || email === "") {
         alert("Please fill in all fields.");
         return;
     }
