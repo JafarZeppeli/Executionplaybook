@@ -1103,90 +1103,124 @@ function toggleFooterDropdown(el) {
 }
 </script>
 
-  <div class="floating-order-widget">
 
-    <button class="order-main-btn" onclick="toggleOrderMenu()">
+
+
+
+
+  <!-- Floating Bouncing Order Widget -->
+<div id="floatingOrderContainer">
+
+    <button id="floatingOrderBtn" onclick="toggleOrderLinks()">
         Order Now ▾
     </button>
 
-    <div class="order-links" id="orderLinks">
-    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results/dp/B0GZ778GK9/ref=tmm_pap_swatch_0" target="_blank">Amazon Hardcopy</a>
-    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results-ebook/dp/B0GZ3JVM7L/ref=tmm_kin_swatch_0" target="_blank">Amazon Softcopy</a>
-      <a href="https://selar.com/7715851817" target="_blank">Selar Hardcopy</a>
-      <a href="https://selar.com/8lgg6cb916" target="_blank">Selar Softcopy</a>
-      
+    <div id="floatingOrderLinks">
+
+        <a href="https://www.amazon.com/Execution-Playbook-Vision-Results/dp/B0GZ778GK9/ref=tmm_pap_swatch_0" target="_blank">
+            Amazon Hardcopy
+        </a>
+
+        <a href="https://www.amazon.com/Execution-Playbook-Vision-Results-ebook/dp/B0GZ3JVM7L/ref=tmm_kin_swatch_0" target="_blank">
+            Amazon Softcopy
+        </a>
+
+        <a href="https://selar.com/7715851817" target="_blank">
+            Selar Hardcopy
+        </a>
+
+        <a href="https://selar.com/8lgg6cb916" target="_blank">
+            Selar Softcopy
+        </a>
+
     </div>
 
 </div>
 
 
 <style>
-#floatingOrderBox{
-    position: fixed !important;
-    bottom: 25px !important;
-    right: 25px !important;
-    z-index: 999999 !important;
+#floatingOrderContainer{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    z-index: 999999;
+    animation: bounceAround 18s linear infinite alternate;
 }
 
-#orderButton{
+#floatingOrderBtn{
     background: #2563eb;
     color: white;
     border: none;
-    padding: 14px 22px;
     border-radius: 50px;
+    padding: 14px 22px;
+    cursor: pointer;
     font-size: 15px;
     font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
 }
 
-#orderDropdown{
+#floatingOrderLinks{
     display: none;
     margin-top: 10px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    min-width: 220px;
 }
 
-#orderDropdown a{
+#floatingOrderLinks a{
     display: block;
-    padding: 14px 20px;
+    padding: 14px 18px;
     color: black;
     text-decoration: none;
+    border-bottom: 1px solid #eee;
     font-family: Arial, sans-serif;
 }
 
-#orderDropdown a:hover{
+#floatingOrderLinks a:last-child{
+    border-bottom: none;
+}
+
+#floatingOrderLinks a:hover{
     color: #2563eb;
+}
+
+@keyframes bounceAround {
+
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    25%{
+        transform: translate(250px,120px);
+    }
+
+    50%{
+        transform: translate(500px,0px);
+    }
+
+    75%{
+        transform: translate(300px,220px);
+    }
+
+    100%{
+        transform: translate(0px,120px);
+    }
+
 }
 </style>
 
 
 <script>
-function toggleOrderMenu(){
+function toggleOrderLinks(){
 
-    const menu = document.getElementById("orderDropdown");
+    const links = document.getElementById("floatingOrderLinks");
 
-    if(menu.style.display === "block"){
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-
-}
-</script>
-
-
-<script>
-function toggleOrderMenu() {
-
-    const menu = document.getElementById("orderLinks");
-
-    if(menu.style.display === "block"){
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
+    if(links.style.display === "block"){
+        links.style.display = "none";
+    }else{
+        links.style.display = "block";
     }
 
 }
