@@ -1103,18 +1103,24 @@ function toggleFooterDropdown(el) {
 }
 </script>
 
-  <!-- Floating Order Widget -->
-<div class="floating-order-widget">
+<!-- Floating Order Button -->
+<div id="floatingOrderBox">
+
+    <button id="orderButton" onclick="toggleOrderMenu()">
+        Order Now ▾
+    </button>
+
+  <div class="floating-order-widget">
 
     <button class="order-main-btn" onclick="toggleOrderMenu()">
         Order Now ▾
     </button>
 
     <div class="order-links" id="orderLinks">
-    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results/dp/B0GZ778GK9/ref=tmm_pap_swatch_0" target="_blank">Hardcopy</a>
-    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results-ebook/dp/B0GZ3JVM7L/ref=tmm_kin_swatch_0" target="_blank">Softcopy</a>
-        <a href="https://selar.com/7715851817" target="_blank">Hardcopy</a>
-      <a href="https://selar.com/8lgg6cb916" target="_blank">Softcopy</a>
+    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results/dp/B0GZ778GK9/ref=tmm_pap_swatch_0" target="_blank">Amazon Hardcopy</a>
+    <a href="https://www.amazon.com/Execution-Playbook-Vision-Results-ebook/dp/B0GZ3JVM7L/ref=tmm_kin_swatch_0" target="_blank">Amazon Softcopy</a>
+      <a href="https://selar.com/7715851817" target="_blank">Selar Hardcopy</a>
+      <a href="https://selar.com/8lgg6cb916" target="_blank">Selar Softcopy</a>
       
     </div>
 
@@ -1122,52 +1128,61 @@ function toggleFooterDropdown(el) {
 
 
 <style>
-.floating-order-widget{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    z-index:9999;
-    font-family:Arial, sans-serif;
+#floatingOrderBox{
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    z-index: 999999 !important;
 }
 
-.order-main-btn{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:14px 22px;
-    border-radius:30px;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+#orderButton{
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.order-links{
-    display:none;
-    margin-top:10px;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.12);
-    overflow:hidden;
+#orderDropdown{
+    display: none;
+    margin-top: 10px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.order-links a{
-    display:block;
-    padding:14px 22px;
-    color:#000;
-    text-decoration:none;
-    border-bottom:1px solid #eee;
-    font-weight:500;
+#orderDropdown a{
+    display: block;
+    padding: 14px 20px;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
 }
 
-.order-links a:last-child{
-    border-bottom:none;
-}
-
-.order-links a:hover{
-    color:#2563eb;
+#orderDropdown a:hover{
+    color: #2563eb;
 }
 </style>
+
+
+<script>
+function toggleOrderMenu(){
+
+    const menu = document.getElementById("orderDropdown");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+
+}
+</script>
 
 
 <script>
